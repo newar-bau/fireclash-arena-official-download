@@ -7,15 +7,25 @@
     <title>FireClash Arena - Official Download</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏆</text></svg>">
     <meta name="description" content="Official download page for the FireClash Arena esports platform. Join daily tournaments for Free Fire, PUBG, and eFootball in Nepal. eSewa supported.">
-    <!-- TODO: Add Open Graph meta tags for social media sharing -->
+
+    <!-- =================================================================== -->
+    <!-- == NEW: Meta Tags for Social Media Sharing == -->
+    <!-- TODO: Replace 'https://your-live-website-url.com' with your actual website link -->
+    <!-- =================================================================== -->
+    <meta property="og:title" content="Download FireClash Arena" />
+    <meta property="og:description" content="The ultimate esports platform for the Nepali gaming community. Join tournaments for Free Fire, PUBG & eFootball!" />
+    <meta property="og:image" content="https://your-live-website-url.com/share.png" />
+    <meta property="og:url" content="https://your-live-website-url.com/app-details.html" />
+    <meta property="og:type" content="website" />
+    <!-- =================================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display.swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* All CSS remains the same as the previous version */
+        /* All CSS remains the same */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: #1a1a1d; color: #f5f5f5; padding: 20px; }
         .container { max-width: 500px; margin: 0 auto; }
@@ -31,6 +41,10 @@
         .install-button.install:hover { background-color: #218838; }
         .install-button.installing { background-color: #6c757d; color: #f0f0f0; cursor: not-allowed; }
         .install-button.open { background-color: #007bff; color: #ffffff; cursor: pointer; }
+        /* NEW: Style for Update button */
+        .install-button.update { background-color: #ff9800; color: #ffffff; }
+        .install-button.update:hover { background-color: #e68900; }
+
         .install-progress-ring { position: absolute; top: -5px; left: -5px; width: 90px; height: 90px; transform: rotate(-90deg); opacity: 0; transition: opacity 0.3s; }
         .install-progress-ring__circle { stroke: #28a745; stroke-width: 4; fill: transparent; stroke-dasharray: 251.2, 251.2; stroke-dashoffset: 251.2; }
         .app-logo-container.installing .install-progress-ring { opacity: 1; }
@@ -72,39 +86,15 @@
                 <img src="logo.png" alt="FireClash Arena Logo" class="app-logo">
                 <svg class="install-progress-ring"><circle class="install-progress-ring__circle" r="40" cx="45" cy="45"></circle></svg>
             </div>
-            <div class="app-info">
-                <h1>FireClash Arena</h1>
-                <p class="developer">FCA Studios Nepal</p>
-            </div>
+            <div class="app-info"><h1>FireClash Arena</h1><p class="developer">FCA Studios Nepal</p></div>
         </header>
         <main>
-            <button class="install-button install" id="installButton">
-                <i class="fas fa-download"></i><span>Install</span>
-            </button>
+            <!-- Changed initial class to 'install' and will be updated by JS -->
+            <button class="install-button install" id="installButton"><i class="fas fa-download"></i><span>Install</span></button>
             <div class="stats-bar">
-                <div class="stat-item">
-                    <span>4.7 <i class="fas fa-star"></i></span>
-                    <p>300+ reviews</p>
-                </div>
-                <div class="stat-item">
-                    <span>2k+</span>
-                    <p>Downloads</p>
-                </div>
-
-                <!-- ======================================================= -->
-                <!-- == UPDATED: App Size Added Here == -->
-                <!-- TODO: Change "4.3 MB" to your actual app size -->
-                <!-- ======================================================= -->
-                <div class="stat-item">
-                    <span>4.3 MB</span>
-                    <p>Size</p>
-                </div>
-                <!-- ======================================================= -->
-                
-                <div class="stat-item">
-                    <span class="age-rating">12+</span>
-                    <p>Rated 12+</p>
-                </div>
+                <div class="stat-item"><span>4.7 <i class="fas fa-star"></i></span><p>300+ reviews</p></div>
+                <div class="stat-item"><span>2k+</span><p>Downloads</p></div>
+                <div class="stat-item"><span class="age-rating">12+</span><p>Rated 12+</p></div>
             </div>
             <section class="screenshots">
                 <h2>Screenshots</h2>
@@ -117,63 +107,70 @@
             </section>
             <section class="about">
                 <h2>About this app</h2>
-                <div class="description" id="appDescription">
-                    <p>
-                        Welcome to FireClash Arena, the ultimate esports platform built for the Nepali gaming community! Compete, conquer, and get rewarded for your skills in your favorite mobile games.
-                        <br><br>
-                        Our platform is the top destination for competitive players in Nepal, hosting daily tournaments for today's most popular titles:
-                        <ul>
-                            <li><strong>Free Fire</strong></li>
-                            <li><strong>PUBG Mobile</strong></li>
-                            <li><strong>eFootball</strong></li>
-                        </ul>
-                        <br>
-                        With secure and easy prize withdrawals directly through <strong>eSewa</strong>, getting your winnings has never been simpler or more trustworthy. Join thousands of other players, prove your skills, and start your journey to becoming a champion today!
-                    </p>
-                </div>
+                <div class="description" id="appDescription"><p>Welcome to FireClash Arena, the ultimate esports platform built for the Nepali gaming community! Compete, conquer, and get rewarded for your skills in your favorite mobile games.<br><br>Our platform is the top destination for competitive players in Nepal, hosting daily tournaments for today's most popular titles:<ul><li><strong>Free Fire</strong></li><li><strong>PUBG Mobile</strong></li><li><strong>eFootball</strong></li></ul><br>With secure and easy prize withdrawals directly through <strong>eSewa</strong>, getting your winnings has never been simpler or more trustworthy. Join thousands of other players, prove your skills, and start your journey to becoming a champion today!</p></div>
                 <a id="toggleDescription">Read More</a>
             </section>
         </main>
-        <footer>
-            <p>&copy; 2025 FCA Studios Nepal. All Rights Reserved.</p>
-        </footer>
+        <footer><p>&copy; 2025 FCA Studios Nepal. All Rights Reserved.</p></footer>
     </div>
-
-    <!-- Screenshot Modal Viewer HTML -->
     <div class="ss-viewer" id="ssViewer">
         <span class="close-btn" id="ssCloseBtn">&times;</span>
         <button class="ss-nav prev" id="ssPrevBtn">&#10094;</button>
-        <div class="ss-modal" id="ssModal">
-            <div class="ss-viewer-content" id="ssViewerContent"></div>
-        </div>
+        <div class="ss-modal" id="ssModal"><div class="ss-viewer-content" id="ssViewerContent"></div></div>
         <button class="ss-nav next" id="ssNextBtn">&#10095;</button>
     </div>
-
     <script>
-        // All JavaScript remains the same as the previous version
         const installButton = document.getElementById('installButton');
         const buttonText = installButton.querySelector('span');
         const logoContainer = document.getElementById('logoContainer');
         const apkFile = 'FireClash Arena.apk';
+        const APP_INSTALLED_KEY = 'fireclashArenaInstalled';
+
+        // Function to update button state
+        const updateButtonState = () => {
+            if (localStorage.getItem(APP_INSTALLED_KEY) === 'true') {
+                installButton.classList.remove('install', 'installing', 'open');
+                installButton.classList.add('update');
+                buttonText.textContent = 'Update';
+                installButton.innerHTML = '<i class="fas fa-sync-alt"></i><span>Update</span>'; // Change icon to refresh/sync
+            } else {
+                installButton.classList.remove('update', 'installing', 'open');
+                installButton.classList.add('install');
+                buttonText.textContent = 'Install';
+                installButton.innerHTML = '<i class="fas fa-download"></i><span>Install</span>'; // Change icon to download
+            }
+        };
+
+        // Call updateButtonState on page load
+        document.addEventListener('DOMContentLoaded', updateButtonState);
 
         installButton.addEventListener('click', () => {
-            if (installButton.classList.contains('installing') || installButton.classList.contains('open')) return;
+            // Always allow download, regardless of button text (Install or Update)
             const link = document.createElement('a');
             link.href = apkFile;
             link.download = apkFile;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            installButton.classList.remove('install');
+
+            // Set the "installed" flag in localStorage
+            localStorage.setItem(APP_INSTALLED_KEY, 'true');
+
+            // Visually indicate installing/updating and then switch to 'Update'
+            installButton.classList.remove('install', 'update', 'open');
             installButton.classList.add('installing');
-            buttonText.textContent = 'Installing...';
+            buttonText.textContent = 'Downloading...';
             logoContainer.classList.add('installing');
+
             setTimeout(() => {
                 logoContainer.classList.remove('installing');
                 installButton.classList.remove('installing');
-                installButton.classList.add('open');
-                buttonText.textContent = 'Open';
-            }, 3000);
+                
+                // After download/install simulation, update to 'Update' state
+                installButton.classList.add('update');
+                buttonText.textContent = 'Update';
+                installButton.innerHTML = '<i class="fas fa-sync-alt"></i><span>Update</span>'; // Ensure icon also changes back
+            }, 3000); // Simulate download for 3 seconds
         });
 
         const description = document.getElementById('appDescription');
@@ -211,6 +208,7 @@
 
         const nextScreenshot = () => showScreenshot(Math.min(ssThumbs.length - 1, currentSsIndex + 1));
         const prevScreenshot = () => showScreenshot(Math.max(0, currentSsIndex - 1));
+
         document.getElementById('ssNextBtn').addEventListener('click', nextScreenshot);
         document.getElementById('ssPrevBtn').addEventListener('click', prevScreenshot);
 
