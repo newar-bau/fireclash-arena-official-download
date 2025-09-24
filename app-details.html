@@ -92,7 +92,8 @@
             <!-- Changed initial class to 'install' and will be updated by JS -->
             <button class="install-button install" id="installButton"><i class="fas fa-download"></i><span>Install</span></button>
             <div class="stats-bar">
-                <div class="stat-item"><span>4.7 <i class="fas fa-star"></i></span><p>300+ reviews</p></div>
+                <div class="stat-item"><span>4.7 <i class="fas fa-star"></i></span><p>329 reviews</p></div>
+                <div class="stat-item"><span>4.56 MB</span><p>Size</p></div>
                 <div class="stat-item"><span>2k+</span><p>Downloads</p></div>
                 <div class="stat-item"><span class="age-rating">12+</span><p>Rated 12+</p></div>
             </div>
@@ -131,13 +132,11 @@
             if (localStorage.getItem(APP_INSTALLED_KEY) === 'true') {
                 installButton.classList.remove('install', 'installing', 'open');
                 installButton.classList.add('update');
-                buttonText.textContent = 'Update';
-                installButton.innerHTML = '<i class="fas fa-sync-alt"></i><span>Update</span>'; // Change icon to refresh/sync
+                installButton.innerHTML = '<i class="fas fa-sync-alt"></i><span>Update</span>';
             } else {
                 installButton.classList.remove('update', 'installing', 'open');
                 installButton.classList.add('install');
-                buttonText.textContent = 'Install';
-                installButton.innerHTML = '<i class="fas fa-download"></i><span>Install</span>'; // Change icon to download
+                installButton.innerHTML = '<i class="fas fa-download"></i><span>Install</span>';
             }
         };
 
